@@ -173,7 +173,7 @@ export default {
       position: relative;
       width: 58px;
       border: 0;
-      background: $dark;
+      background: $black;
       appearance: none;
       outline: 0;
       transition: all .4s ease-in-out;
