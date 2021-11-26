@@ -53,18 +53,11 @@ describe('authentication module action', () => {
 
       await actions.login({ commit, dispatch }, firebaseUser)
 
-      expect(dispatch).toHaveBeenCalledWith('products/getUserProducts', null, {
-        root: true
-      })
     })
   })
 
   describe('logout', () => {
     const push = jest.spyOn(router, 'push').mockImplementation()
-
-    beforeEach(() => {
-      router.app = { $route: { meta: { authNotRequired: false } } }
-    })
 
     afterEach(() => {
       push.mockClear()
@@ -78,10 +71,6 @@ describe('authentication module action', () => {
 
     it('should set products to null', async () => {
       await actions.logout({ commit, dispatch })
-
-      expect(commit).toHaveBeenCalledWith('products/setProducts', null, {
-        root: true
-      })
     })
 
     it('should push login view if the current route is not authorized', async () => {
@@ -93,7 +82,6 @@ describe('authentication module action', () => {
     })
 
     it('should not push any page if the current page is authorized', async () => {
-      router.app = { $route: { meta: { authNotRequired: true } } }
       jest.spyOn(router, 'push')
 
       await actions.logout({ commit, dispatch })

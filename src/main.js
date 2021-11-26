@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 import App from './App.vue'
 import router from './router'
@@ -11,6 +12,13 @@ import '@/misc/handle-apple-install-prompt'
 import 'pwacompat'
 
 Vue.config.productionTip = false
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAS1Z8dfGV4N6QtuDhaFpq1pIQvAly6LTw',
+    libraries: '',
+  }
+});
 
 new Vue({
   router,

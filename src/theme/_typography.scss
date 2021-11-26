@@ -1,0 +1,55 @@
+.heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  letter-spacing: -0.285714px;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: -0.232143px;
+  }
+}
+
+.body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  &.big {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: -0.232143px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -0.178571px;
+    }
+  }
+
+  &.small {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.75px;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 1.45833px;
+    }
+  }
+
+  &.strong {
+    font-weight: bold;
+  }
+
+  &.upper {
+    text-transform: uppercase;
+  }
+}
